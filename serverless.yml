@@ -1,0 +1,25 @@
+service: snym
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+package:
+  individually: true
+
+functions:
+  web:
+    handler: aws/web.handler
+    events:
+      - http:
+          method: get
+          path: /
+      - http:
+          method: get
+          path: /_next/{proxy+}
+    package:
+      include:
+        - ../.next/**
+        - ../static/**
+
+plugins:
+  - serverless-offline
