@@ -8,7 +8,7 @@ package:
 
 functions:
   web:
-    handler: aws/web.handler
+    handler: aws_web/web.handler
     events:
       - http:
           method: get
