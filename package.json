@@ -15,6 +15,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-jss": "latest",
+    "serverless-google-cloudfunctions": "^1.1.1",
     "serverless-offline": "^3.18.0"
   },
   "devDependencies": {
